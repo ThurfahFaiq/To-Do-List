@@ -1,7 +1,7 @@
 
 todo_list = []
 
-# FUNCTION TAMBAH TUGAS
+
 def tambah_tugas():
 
     tugas = input("Masukkan tugas: ")
@@ -15,19 +15,19 @@ def tambah_tugas():
 
     print("Tugas berhasil ditambahkan")
 
+\
 
-# FUNCTION LIHAT TUGAS
 def lihat_tugas():
 
     if len(todo_list) == 0:
         print("Belum ada tugas")
         return
 
-    print("\n===== DAFTAR TUGAS =====")
+    print("\n----- DAFTAR TUGAS -----")
 
     for i in range(len(todo_list)):
 
-        status = "✓" if todo_list[i]["selesai"] else "X"
+        status = "V" if todo_list[i]["selesai"] else "X"
 
         print(f"{i + 1}. [{status}] {todo_list[i]['tugas']}")
 
@@ -92,7 +92,7 @@ def total_tugas():
 
     belum = total - selesai
 
-    print("\n===== TOTAL TUGAS =====")
+    print("\n----- TOTAL TUGAS -----")
     print("Total tugas :", total)
     print("Selesai     :", selesai)
     print("Belum selesai :", belum)
@@ -101,9 +101,9 @@ def total_tugas():
 # MENU UTAMA
 while True:
 
-    print("\n" + "=" * 35)
+    print("\n" + "-" * 35)
     print("         TO DO LIST CLI")
-    print("=" * 35)
+    print("-" * 35)
 
     print("1. Tambah Tugas")
     print("2. Lihat Tugas")
